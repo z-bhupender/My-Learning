@@ -1,0 +1,121 @@
+-- To show all the databases.
+-- SHOW DATABASES;
+-- **********************************
+-- To create a new database.
+-- CREATE DATABASE <name_for_database>;
+-- **********************************
+-- To delete a database.
+-- DROP DATABASE <name_for_database>;
+-- **********************************
+-- To use database.
+-- USE <name_for_database>;
+-- **********************************
+-- To show the current database that is being used.
+-- select database();
+-- **********************************
+-- To create a new table in the database.
+-- CREATE TABLE <table_name> (
+--     <column_name> <data_type> PRIMARY KEY
+-- );
+-- **********************************
+-- To display the columns of a table.
+-- SHOW COLUMNS FROM cats;
+-- or
+-- DESC dogs;
+-- **********************************
+-- To delete a table.
+-- DROP TABLE <table_name>;
+-- **********************************
+-- To insert values in a table.
+-- INSERT INTO <table_name>(<column_name>)
+-- VALUES (<values>)
+-- ,(<values>);
+-- **********************************
+-- To add a default value in a table column with setting it to "NOT NULL".
+-- CREATE TABLE <table_name>
+-- (
+--     <column_name> <data_type> NOT NULL DEFAULT "<value>",
+--     PRIMARY KEY (<column_name>)
+-- );
+-- **********************************
+-- To create a table with ->
+-- 1) Default Value
+-- 2) NOT NULL
+-- 3) Primary Key
+-- 4) Auto Increment
+-- CREATE TABLE <table_name>(
+--     <column_name> <data_type> NOT NULL AUTO_INCREMENT,
+--     <column_name> <data_type> NOT NULL DEFAULT "<value>",
+--     PRIMARY KEY (<column_name>)
+-- );
+-- **********************************
+-- CRUD
+-- > CREATE
+-- > READ
+-- > UPDATE
+-- > DELETE
+-- New Data Set
+-- CREATE TABLE cats (
+--     cat_id INT AUTO_INCREMENT,
+--     name VARCHAR(100),
+--     breed VARCHAR(100),
+--     age INT,
+--     PRIMARY KEY (cat_id)
+-- );
+-- INSERT INTO cats(name, breed, age) 
+-- VALUES ('Ringo', 'Tabby', 4),
+--       ('Cindy', 'Maine Coon', 10),
+--       ('Dumbledore', 'Maine Coon', 11),
+--       ('Egg', 'Persian', 4),
+--       ('Misty', 'Tabby', 13),
+--       ('George Michael', 'Ragdoll', 9),
+--       ('Jackson', 'Sphynx', 7);
+-- **********************************
+-- To give a alias name for a column.
+-- SELECT <column_name> AS <new_name> FROM <table_name>;
+-- **********************************
+-- To update data in a column.
+-- UPDATE <table_name> SET <data> WHERE <condition>
+-- **********************************
+-- To delete a row from table;
+-- DELETE FROM <table_name> WHERE <condition>;
+-- To delete all rows from table;
+-- DELETE FROM <table_name>
+-- **********************************
+-- String Functions
+-- 1) CONCAT: SELECT CONCAT(<col 1>, " ", <col 2>) AS '<name_for_new_table>' FROM <table_name>;
+--    CONCAT_WS(With Separator): SELECT CONCAT_WS(" ", <col 1>, <col 2>) AS '<name_for_new_table>' FROM <table_name>;
+-- 2) SUBSTRING / SUBSTR: SELECT SUBSTRING("<text>", <starting_index>, <ending_index>);
+-- 3) REPLACE: SELECT REPLACE("<main_text>", "<sub_text_to_be_replaced>", "<replacing_sub_text>");
+-- 4) REVERSE: SELECT REVERSE("<text>");
+-- 5) CHAR_LENGTH: SELECT CHAR_LENGTH("<text>"); returns how many characters are present.
+-- 6) LENGTH: SELECT LENGTH(<text>); return length of string in bytes.
+-- 7) UPPER / LOWER: SELECT UPPER/LOWER("<text>"); convert string to uppercase or lowercase;
+-- 8) INSERT: SELECT INSERT("<text>", <index>, <number_of_charcters_to_be_replaced>, "<new_text>");
+-- 9) LEFt/RIGHT: SELECT LEFT/RIGHT("<text>", <number_of_characters>); returns leftmost/rightmost characters
+-- 10) TRIM: SELECT TRIM("<text>"); removes leading of trailing spaces from the text.
+--           SELECT TRIM(LEADING "<text_to_be_trimmed>" FROM "<text>");
+--           SELECT TRIM(BOTH "<text_to_be_trimmed>" FROM "<text>");
+--           SELECT TRIM(TRAILING "<text_to_be_trimmed>" FROM "<text>");
+-- **********************************
+
+-- Refining Selections
+-- 1) DISTINCT: SELECT DISTINCT <column_name> FROM <table_name>; unselects all duplicates.
+-- 2) ORDER BY: SELECT <column_name> FROM <table_name> ORDER BY <column_name>; sort in ascending order based on given column name.
+--    SELECT <column_name> FROM <table_name> ORDER BY <column_name> DESC; sort in descending order.
+--    SELECT <column_name> FROM <table_name> ORDER BY <column_name> ASC; sort in ascending order.
+--    SELECT <column_name> FROM <table_name> ORDER BY <specified_column_number>; returns according to the given column number.
+-- 3) LIMIT: SELECT <column_name> FROM <table_name> LIMIT <number>; it limits the output upto the number mentioned.
+-- 4) LIKE: SELECT <column_name> FROM <table_name> WHERE <column_nam e> LIKE '%<text>%'; (% -> known as wildcards)
+
+-- **********************************
+
+-- Aggregate Functions
+-- 1) COUNT(): SELECT COUNT(DISTINCT <column_name> or <column_name> or *) FROM <table_name>; returns total count of rows in a table.
+-- 2) MIN / MAX: SELECT MIN / MAX(<column_name>) FROM <table_name>;
+-- 3) GROUP BY: ? GROUP BY MULTIPLE COLUMNS
+-- 4) MIN / MAX WITH GROUP BY
+-- 5) SUM
+-- 6) AVG
+
+-- **********************************
