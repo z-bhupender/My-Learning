@@ -170,7 +170,3 @@ print(csv_data.pivot_table(
     values="Age", index="Gender", columns="Name", aggfunc="mean", margins=True
 ))
 """
-
-# -------------------------------------
-"""--------Data Concatination-------"""
-# -------------------------------------
