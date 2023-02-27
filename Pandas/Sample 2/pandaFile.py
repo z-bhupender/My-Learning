@@ -1,7 +1,9 @@
+"""
 import pandas as pd
 
 male = pd.read_csv("male.csv", encoding="utf-8")
 female = pd.read_csv("female.csv", encoding="utf-8")
+"""
 
 # ----------------------------------------
 """Combining data from different tables"""
