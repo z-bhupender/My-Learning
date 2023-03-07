@@ -1,0 +1,41 @@
+#update-section {
+  height: calc(100dvh - 70px);
+}
+form{
+  height: 100%;
+}
+#update-section .row {
+  height: 100%;
+}
+.left-side {
+  border-right: 3px solid black;
+}
+.left-side button {
+  border: 3px solid black;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  transform: scale(1, 1);
+  background-color: white;
+  border: 3px solid black;
+  color: black !important;
+  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.left-side button:hover {
+  transform: scale(0.9, 0.9);
+  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+#update-section article {
+  height: 100%;
+}
+#update-section article input[type="text"] {
+  width: 100%;
+  height: 10%;
+  border: 3px solid black;
+}
+#update-section article textarea {
+  width: 100%;
+  height: 90%;
+  resize: none;
+  border: 3px solid black;
+}

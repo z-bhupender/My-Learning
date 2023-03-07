@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock title %}
+{% block css %}
+<link rel="stylesheet" href="/static/css/create.css" />
+{% endblock css %}
+{% block body %}
+<div class="container-fluid" id="create-section">
+    <form action="/" method="POST">
+        <div class="row">
+            <div class="col-2 p-3 m-0 left-side">
+                <button type="submit" class="gap-2 px-4 py-2 w-100 d-flex align-items-center justify-content-center"
+                    title="Add To List"><i class="bi bi-plus-lg"></i><span>Add</span></button>
+            </div>
+            <div class="col-10 p-3 m-0 right-side">
+                <article class="d-flex align-items-center flex-column gap-4">
+                    <input type="text" name="title" id="title" placeholder="Title" class="p-1" />
+                    <textarea name="desc" id="description" placeholder="Description" class="p-1"></textarea>
+                </article>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock body %}
